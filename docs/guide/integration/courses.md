@@ -11,18 +11,24 @@ GET `https://your-external-platform.com/api/v1/courses`
 
 The API needs to respond to the following specifications:
 
+**Query parameters**
+| Field  | Type  | Default  | Description  |
+|---|---|---|---|
+| page | number  | 1  |  Page number to retrieve |
+| per_page | number | 10  | Number of courses to retrieve  |
+
+
 ```json
 {
-    "total": 6,
-    "per_page": "10",
+    "total": 52,
+    "per_page": 10,
     "current_page": 2,
-    "last_page": 2,
-    "next_page_url": "https://your-external-platform.com/api/v1/courses?page=3",
+    "last_page": 5,
     "prev_page_url": "https://your-external-platform.com/api/v1/courses?page=1",
-    "from": 1,
-    "to": 10,
+    "next_page_url": "https://your-external-platform.com/api/v1/courses?page=3",
     "data" : [
         {
+            "id": 1,
             "code": "001",
             "title": "A course title",
             "thumbnail": "https://your-external-platform.com/storage/app/medias/courses/thumbnail/181120100340-hairdresser-3572053_1280.jpg",
@@ -52,3 +58,12 @@ The API needs to respond to the following specifications:
 }
 ```
 
+
+
+## Integration Strategy
+
+In case you are updating your courses after being integrated inside SkillUp, a scheduled worker will scan at a predefined frequence your courses list API to detect if:
+- there are new courses
+- existing courses have been updated
+
+Also, a SkillUp admin has the possibility to run a course update manually from SkillUp backend performing a call to the [Course Content](/guide/integration/course) API.
