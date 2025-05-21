@@ -3,6 +3,7 @@ import BadgeStd from '../../.vitepress/components/BadgeStd.vue'
 </script>
 
 # Courses list
+
 <BadgeStd label="Page is Work in Progress" color="danger" />
 
 SkillUp can import all or part of your courses directly from your platform.
@@ -11,17 +12,15 @@ SkillUp can import all or part of your courses directly from your platform.
 
 Your platform needs to provide the following API to retrieve your courses list.
 
-
 GET `https://your-external-platform.com/api/v1/courses`
 
 The API needs to respond to the following specifications:
 
 **Query parameters**
-| Field  | Type  | Default  | Description  |
+| Field | Type | Default | Description |
 |---|---|---|---|
-| page | number  | 1  |  Page number to retrieve |
-| per_page | number | 10  | Number of courses to retrieve  |
-
+| page | number | 1 | Page number to retrieve |
+| per_page | number | 10 | Number of courses to retrieve |
 
 ```json
 {
@@ -63,12 +62,11 @@ The API needs to respond to the following specifications:
 }
 ```
 
-
-
 ## Integration Strategy
 
 In case you are updating your courses after being integrated inside SkillUp, a scheduled worker will scan at a predefined frequence your courses list API to detect if:
+
 - there are new courses
 - existing courses have been updated
 
-Also, a SkillUp admin has the possibility to run a course update manually from SkillUp backend performing a call to the [Course Content](/guide/integration/course) API.
+Also, a SkillUp admin has the possibility to run a course update manually from SkillUp backend performing a call to the [Course Content](/integration/courses/content) API.
