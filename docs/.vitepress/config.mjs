@@ -23,6 +23,7 @@ export default defineConfig({
       nav: [
           { text: 'Home', link: '/' },
           { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
+          { text: 'Integration', link: '/integration/', activeMatch: '/integration/' },
           { text: 'Development', link: '/development/', activeMatch: '/development/' }
       ],
     sidebar: {
@@ -58,13 +59,14 @@ export default defineConfig({
                         { text: 'MyAccount', link: '/guide/components/my-account' },
                     ]
                 },
+            ],
+            '/integration/': [
                 {
                     text: 'Integration',
-                    collapsed: true,
+                    collapsed: false,
                     items: [
-                        { text: 'Introduction', link: '/guide/integration/introduction' },
-                        { text: 'Courses List', link: '/guide/integration/courses' },
-                        { text: 'Course Content', link: '/guide/integration/course' },
+                        { text: 'Courses List', link: '/integration/courses/list' },
+                        { text: 'Course Content', link: '/integration/courses/content' },
                     ]
                 }
             ],

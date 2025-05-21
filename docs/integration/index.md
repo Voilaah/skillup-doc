@@ -1,5 +1,5 @@
 <script setup>
-import BadgeStd from '../../.vitepress/components/BadgeStd.vue'
+import BadgeStd from '../.vitepress/components/BadgeStd.vue'
 </script>
 
 # Introduction
