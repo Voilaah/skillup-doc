@@ -90,7 +90,11 @@ export default defineConfig({
               items: [
                 { text: "Course Create", link: "/integration/courses/create" },
                 { text: "Course Update", link: "/integration/courses/update" },
-                { text: "Course Delete", link: "/integration/courses/delete" }
+                { text: "Course Delete", link: "/integration/courses/delete" },
+                { text: "Lesson Create", link: "/integration/courses/lesson_create" },
+                { text: "Lesson Update", link: "/integration/courses/lesson_update" },
+                { text: "Section Create", link: "/integration/courses/section_create" },
+                { text: "Section Update", link: "/integration/courses/section_update" },
               ]
              }
           ],

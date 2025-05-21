@@ -21,4 +21,4 @@ In case you are updating your courses after being integrated inside SkillUp, a s
 
 ### On-Demand
 
-Also, a SkillUp admin has the possibility to run a course update manually from SkillUp backend performing a call to the [Course Content](/integration/courses/content) API.
+Also, a SkillUp admin has the possibility to perform a course update on-demand from the SkillUp backend performing a call to your API to [fetch](/integration/courses/item) the course updated informations.
