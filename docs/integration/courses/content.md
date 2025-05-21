@@ -9,7 +9,7 @@ import SpoilerStd from '../../.vitepress/components/SpoilerStd.vue'
 
 SkillUp can import a course content directly from your platform.
 
-::: warning
+::: info IMPORTANT
 Only the course medias (such as images, videos, audios, files upload) won't be imported.
 :::
 
@@ -126,7 +126,7 @@ SkillUp handles different types of questions:
 
 <!-- </SpoilerStd> -->
 
-**Complete Example**
+::: details Complete Example
 
 For a course named "Basic Graphic Design with Canva"
 
@@ -166,6 +166,8 @@ For a course named "Basic Graphic Design with Canva"
       - [*Files*]
         - File 1 url
         - File 2 url
+
+:::
 
 ## API requirements
 
