@@ -77,8 +77,10 @@ export default defineConfig({
           text: "Courses Integration",
           collapsed: false,
           items: [
-            { text: "Courses List", link: "/integration/courses/list" },
-            { text: "Course Content", link: "/integration/courses/content" },
+            { text: "Getting Started", link: "/integration/courses" },
+            { text: "Data Structure", link: "/integration/courses/structure" },
+            { text: "Courses List API", link: "/integration/courses/list" },
+            { text: "Course Content API", link: "/integration/courses/content" },
             { text: "Webhook", link: "/integration/courses/webhook" }
           ],
         },
