@@ -88,13 +88,13 @@ export default defineConfig({
             },
             { text: "Webhook", link: "/integration/courses/webhook",
               items: [
-                { text: "Course Create", link: "/integration/courses/create" },
-                { text: "Course Update", link: "/integration/courses/update" },
-                { text: "Course Delete", link: "/integration/courses/delete" },
-                { text: "Lesson Create", link: "/integration/courses/lesson_create" },
-                { text: "Lesson Update", link: "/integration/courses/lesson_update" },
-                { text: "Section Create", link: "/integration/courses/section_create" },
-                { text: "Section Update", link: "/integration/courses/section_update" },
+                { text: "Create a course", link: "/integration/courses/create" },
+                { text: "Update a course", link: "/integration/courses/update" },
+                { text: "Delete a course", link: "/integration/courses/delete" },
+                { text: "Create a lesson", link: "/integration/courses/lesson_create" },
+                { text: "Update a lesson", link: "/integration/courses/lesson_update" },
+                { text: "Create a section", link: "/integration/courses/section_create" },
+                { text: "Update a section", link: "/integration/courses/section_update" },
               ]
              }
           ],
@@ -115,8 +115,8 @@ export default defineConfig({
             },
             { text: "Webhook", link: "/integration/students/webhook",
               items: [
-                { text: "Student Create", link: "/integration/students/create" },
-                { text: "Student Update", link: "/integration/students/update" }
+                { text: "Create a student", link: "/integration/students/create" },
+                { text: "Update a student", link: "/integration/students/update" }
               ]
              }
           ],
