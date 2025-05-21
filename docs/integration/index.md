@@ -1,6 +1,6 @@
 # SkillUp Integration
 
-SkillUp can handle multiple types of integration with our partner's platform.
+SkillUp can handle multiple types of integration with our partner's.
 
 
 ## Course Integration
