@@ -1,3 +1,7 @@
+---
+outline: [1, 5]
+---
+
 # SkillUp Course structure
 
 <Badge type="warning">Page is Work in Progress</Badge>
@@ -12,9 +16,7 @@
             - or summary
 :::
 
-## SkillUp Course Data Structure
-
-### Data Model
+## SkillUp Course Data Model
 
 SkillUp course required fields
 
@@ -42,7 +44,7 @@ SkillUp course required fields
 
 
 
-#### Lesson
+### Lesson
 
 **Lesson fields**
 
@@ -54,7 +56,7 @@ SkillUp course required fields
 
 A _lesson_ has many _sections_.
 
-#### Section
+### Section
 
 **Section fields**
 
@@ -72,14 +74,14 @@ A _lesson_ has many _sections_.
 - or assignment
 - or summary
 
-#### Engagement
+### Engagement
 
 - a rich text content
 - a video
 - an audio
 - an embedded code
 
-#### **Assignment**
+### Assignment
 
 A assignment is a quiz that has many questions.
 
@@ -118,6 +120,14 @@ SkillUp handles different types of questions:
 - multiple choices
 
 <br/>
+
+### Summary
+
+
+## Example
+
+
+
 
 ::: details Complete Example
 
