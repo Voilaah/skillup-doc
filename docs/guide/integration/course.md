@@ -1,4 +1,9 @@
+<script setup>
+import BadgeStd from '../../.vitepress/components/BadgeStd.vue'
+</script>
+
 # Course content
+<BadgeStd label="Page is Work in Progress" color="danger" />
 
 SkillUp can import a course content directly from your platform.
 
