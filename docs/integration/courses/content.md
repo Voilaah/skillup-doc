@@ -174,7 +174,7 @@ GET `https://your-external-platform.com/api/v1/courses/{id}`
 **Query parameters**
 | Field | Type | Default | Description |
 |---|---|---|---|
-| id | number | na | Course Id to retrieve from your platform |
+| id | number | required | Course Id to retrieve from your platform |
 
 ```json
 {
@@ -269,13 +269,13 @@ GET `https://your-external-platform.com/api/v1/courses/{id}`
                                 "title": "What is the correct answer?",
                                 "choices": [
                                     {
-                                        "choice": "A)"
+                                        "choice": "A) A possible answer"
                                     },
                                     {
-                                        "choice": "B)"
+                                        "choice": "B) Another possible answer"
                                     },
                                     {
-                                        "choice": "C)"
+                                        "choice": "C) The correct answer"
                                     },
                                 ],
                                 "answer": 2,
