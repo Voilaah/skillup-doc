@@ -15,38 +15,68 @@ Only the course medias (such as images, videos, audios, files upload) won't be i
 
 ### Structure
 
-A SkillUp course is comprised of many sections.
+A SkillUp course required fields
 
-Each section is comprised of many lessons.
+| Field           | Type    | Default  | Description                              |
+| --------------- | ------- | -------- | ---------------------------------------- |
+| id              | number  | required | Course Id to retrieve from your platform |
+| title           | string  | required | Course title                             |
+| thumbnail       | string  | required | Course thumbnail                         |
+| introduction    | text    | required | Course introduction                      |
+| outcomes        | text    | required | Course outcomes                          |
+| objectives      | text    | required | Course objectives                        |
+| skills          | text    | required | Course skills                            |
+| inclusion       | text    | required | Course inclusion                         |
+| url             | string  | required | The course url on your platform          |
+| duration        | ?number | optional | Course duration in minutes               |
+| organization    | string  | required | Organization                             |
+| level           | enum    | required | [beginner, intermediate, advanced]       |
+| category        | string  | required | Course Category                          |
+| is_coming_soon  | boolean | required | Course is upcoming ?                     |
+| is_published    | boolean | true     | Course is published ?                    |
+| has_certificate | boolean | true     | Course has a certificate ?               |
+| is_free         | boolean | true     | Course                                   |
+| price           | ?number | optional | Course price if not free                 |
+| locale          | string  | required | Course language `en` or `th`             |
+
+In terms of relationships, a SkillUp course has many _lessons_.
+
+And each _lesson_ has many _sections_.
 
 <!-- <SpoilerStd label="Details"> -->
 
 <!-- <br /> -->
 
-#### Section
-
-A section has
-
-- a title (\*)
-- a description (\*)
-
-A section is comprised of many lessons.
-
 #### Lesson
 
-A lesson has
+**Lesson fields**
 
-- a title (\*)
-- a duration (\*)
-- files
+| Field       | Type   | Default  | Description                              |
+| ----------- | ------ | -------- | ---------------------------------------- |
+| id          | number | required | Lesson Id to retrieve from your platform |
+| title       | string | required | Lesson title                             |
+| description | text   | required | Lesson description                       |
 
-A lesson is comprised of one and only one
+A _lesson_ has many _sections_.
+
+#### Section
+
+**Section fields**
+
+| Field    | Type       | Default  | Description                               |
+| -------- | ---------- | -------- | ----------------------------------------- |
+| id       | number     | required | Section Id to retrieve from your platform |
+| title    | string     | required | Section title                             |
+| duration | number     | required | Section duration in minutes               |
+| files    | attachment | optional | Section files attachment                  |
+
+**A section has one and only one**
 
 - engagement
 - or assignment
 - or summary
 
-An engagement can be:
+#### Engagement
 
 - a rich text content
 - a video
@@ -55,11 +85,31 @@ An engagement can be:
 
 #### **Assignment**
 
-A assignment is a quiz that comprises many questions.
+A assignment is a quiz that has many questions.
 
 A quiz can be **graded** or **not**.
 
+**Quiz fields**
+
+| Field     | Type    | Default  | Description                            |
+| --------- | ------- | -------- | -------------------------------------- |
+| id        | number  | required | Quiz Id to retrieve from your platform |
+| title     | string  | required | Quiz title                             |
+| graded    | boolean | true     | Quiz is graded?                        |
+| questions | array   | required | Quiz questions                         |
+
 **Question**
+
+**Question fields**
+
+| Field | Type    | Default  | Description                                            |
+| ----- | ------- | -------- | ------------------------------------------------------ |
+| id    | number  | required | Question Id to retrieve from your platform             |
+| title | string  | required | Question title                                         |
+| image | ?string | optional | Question image displayed below the question title      |
+| type  | enum    | required | Question type: [openanswer, truefalse, multiplechoice] |
+
+A question has a title and an media image optionnaly.
 
 SkillUp handles different types of questions:
 
@@ -148,13 +198,13 @@ GET `https://your-external-platform.com/api/v1/courses/{id}`
         "price": null,
         "locale": "en"
     },
-    "sections": [
+    "lessons": [
         {
-            "title": "Section 1 title",
+            "title": "Lesson 1 title",
             "description":"Nostrud irure ullamco adipisicing qui dolor commodo. Anim exercitation velit tempor reprehenderit dolore.",
-            "lessons":[
+            "sections":[
                 {
-                    "title": "Lesson 1.1 title",
+                    "title": "Section 1.1 title",
                     "description":"Nostrud irure ullamco adipisicing qui dolor commodo. Anim exercitation velit tempor reprehenderit dolore.",
                     "type": "engagement",
                     "engagement": {
@@ -163,7 +213,7 @@ GET `https://your-external-platform.com/api/v1/courses/{id}`
                     }
                 },
                 {
-                    "title": "Lesson 1.2 title",
+                    "title": "Section 1.2 title",
                     "description":"Nostrud irure ullamco adipisicing qui dolor commodo. Anim exercitation velit tempor reprehenderit dolore.",
                     "type": "engagement",
                     "engagement": {
@@ -172,7 +222,7 @@ GET `https://your-external-platform.com/api/v1/courses/{id}`
                     }
                 },
                 {
-                    "title": "Lesson 1.3 title",
+                    "title": "Section 1.3 title",
                     "description":"Nostrud irure ullamco adipisicing qui dolor commodo. Anim exercitation velit tempor reprehenderit dolore.",
                     "type": "engagement",
                     "engagement": {
@@ -181,7 +231,7 @@ GET `https://your-external-platform.com/api/v1/courses/{id}`
                     }
                 },
                 {
-                    "title": "Lesson 1.3 title",
+                    "title": "Section 1.3 title",
                     "description":"Nostrud irure ullamco adipisicing qui dolor commodo. Anim exercitation velit tempor reprehenderit dolore.",
                     "type": "engagement",
                     "engagement": {
@@ -190,7 +240,7 @@ GET `https://your-external-platform.com/api/v1/courses/{id}`
                     }
                 },
                 {
-                    "title": "Lesson 2 title",
+                    "title": "Section 2 title",
                     "description":"Nostrud irure ullamco adipisicing qui dolor commodo. Anim exercitation velit tempor reprehenderit dolore.",
                     "type": "assignment",
                     "assignment": {
