@@ -68,6 +68,7 @@ A _lesson_ has many _sections_.
 | id       | number     | required | Section Id to retrieve from your platform |
 | title    | string     | required | Section title                             |
 | duration | number     | required | Section duration in minutes               |
+| type     | enum       | required | engagement\|assignment\|summary           |
 | files    | attachment | optional | Section files attachment                  |
 
 **A section has one and only one**
@@ -128,10 +129,10 @@ SkillUp handles different types of questions:
 For a course named "Basic Graphic Design with Canva"
 
 - [**Course**] Basic Graphic Design with Canva
-  - [**Section**] Foundations of Design
-    - [**Lesson**] Foundations of Design Video
+  - [**Lesson**] Foundations of Design
+    - [**Section**] Foundations of Design Video
       - [**Engagement**] a video
-    - [**Lesson**] Foundations of Design Quiz
+    - [**Section**] Foundations of Design Quiz
       - [**Assignment**] a ungraded quiz
         - [*OpenAnswer*]: Write a summary of your understanding of the video
         - [*MultipleChoice*]: What is the main function of negative space in design?
@@ -141,24 +142,24 @@ For a course named "Basic Graphic Design with Canva"
             - C) To make the design more complex
           - [*Answer*]
             - 2
-    - [**Lesson**] Lesson summary
+    - [**Section**] Section summary
       - [**Engagement**] a summary
-    - [**Lesson**] Additional Resources
+    - [**Section**] Additional Resources
       - [**Engagement**] a rich text content
       - [*Files*]
         - File 1 url
         - File 2 url
-  - [**Section**] Advanced Design Principles
-    - [**Lesson**] Advanced Design Principles Video
+  - [**Lesson**] Advanced Design Principles
+    - [**Section**] Advanced Design Principles Video
       - [**Engagement**] an embedded code
-    - [**Lesson**] Advanced Design Principles Quiz (graded)
+    - [**Section**] Advanced Design Principles Quiz (graded)
       - [**Assignment**] a graded quiz
         - [*OpenAnswer*]: Write a summary of your understanding of the video
         - [*TrueFalse*]: The function of negative space in design is to make design more complex ?
           - [*Answer*] true
-    - [**Lesson**] Lesson summary
+    - [**Section**] Section summary
       - [**Engagement**] a summary
-    - [**Lesson**] Additional Resources
+    - [**Section**] Additional Resources
       - [**Engagement**] a rich text content
       - [*Files*]
         - File 1 url
@@ -209,7 +210,6 @@ GET `https://your-external-platform.com/api/v1/courses/{id}`
             "sections":[
                 {
                     "title": "Section 1.1 title",
-                    "description":"Nostrud irure ullamco adipisicing qui dolor commodo. Anim exercitation velit tempor reprehenderit dolore.",
                     "type": "engagement",
                     "engagement": {
                         "type": "richcontent",
@@ -218,7 +218,6 @@ GET `https://your-external-platform.com/api/v1/courses/{id}`
                 },
                 {
                     "title": "Section 1.2 title",
-                    "description":"Nostrud irure ullamco adipisicing qui dolor commodo. Anim exercitation velit tempor reprehenderit dolore.",
                     "type": "engagement",
                     "engagement": {
                         "type": "video",
@@ -227,7 +226,6 @@ GET `https://your-external-platform.com/api/v1/courses/{id}`
                 },
                 {
                     "title": "Section 1.3 title",
-                    "description":"Nostrud irure ullamco adipisicing qui dolor commodo. Anim exercitation velit tempor reprehenderit dolore.",
                     "type": "engagement",
                     "engagement": {
                         "type": "audio",
@@ -236,7 +234,6 @@ GET `https://your-external-platform.com/api/v1/courses/{id}`
                 },
                 {
                     "title": "Section 1.3 title",
-                    "description":"Nostrud irure ullamco adipisicing qui dolor commodo. Anim exercitation velit tempor reprehenderit dolore.",
                     "type": "engagement",
                     "engagement": {
                         "type": "embedded",
@@ -245,7 +242,6 @@ GET `https://your-external-platform.com/api/v1/courses/{id}`
                 },
                 {
                     "title": "Section 2 title",
-                    "description":"Nostrud irure ullamco adipisicing qui dolor commodo. Anim exercitation velit tempor reprehenderit dolore.",
                     "type": "assignment",
                     "assignment": {
                         "type": "quiz",
