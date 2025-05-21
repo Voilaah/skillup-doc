@@ -6,7 +6,7 @@ Once setup in our SkillUp backend, the platform will be able to fetch your cours
 
 First, have a read through the [SkillUp Course Data Structure](/integration/courses/structure) to better understand our platform.
 
-Then be able to integrate your courses, SkillUp requires only two APIs from your platform:
+Then to be able to integrate your courses, SkillUp requires only two APIs from your platform:
 - [one to fetch your courses list](/integration/courses/list)
 - [one to fetch a course detail](/integration/courses/item)
 
