@@ -8,9 +8,9 @@ outline: [1, 5]
 
 ::: info IMPORTANT DEFINITION
 
-- A SkillUp course has many *lessons*.
-    - A lesson has many *sections*.
-        - A section has one:
+- A SkillUp course has many *modules*.
+    - A *module* has many *lessons*.
+        - A *lesson* has one:
             - engagement
             - or assignment
             - or summary
@@ -44,31 +44,30 @@ SkillUp course required fields
 
 
 
+### Module
+
+**Module fields**
+
+| Field       | Type   | Default  | Description                              |
+| ----------- | ------ | -------- | ---------------------------------------- |
+| id          | number | required | Module Id to retrieve from your platform |
+| title       | string | required | Module title                             |
+| description | text   | required | Module description                       |
+
+
 ### Lesson
 
 **Lesson fields**
 
-| Field       | Type   | Default  | Description                              |
-| ----------- | ------ | -------- | ---------------------------------------- |
-| id          | number | required | Lesson Id to retrieve from your platform |
-| title       | string | required | Lesson title                             |
-| description | text   | required | Lesson description                       |
-
-A _lesson_ has many _sections_.
-
-### Section
-
-**Section fields**
-
 | Field    | Type       | Default  | Description                               |
 | -------- | ---------- | -------- | ----------------------------------------- |
-| id       | number     | required | Section Id to retrieve from your platform |
-| title    | string     | required | Section title                             |
-| duration | number     | required | Section duration in minutes               |
+| id       | number     | required | Lesson Id to retrieve from your platform |
+| title    | string     | required | Lesson title                             |
+| duration | number     | required | Lesson duration in minutes               |
 | type     | enum       | required | engagement\|assignment\|summary           |
-| files    | attachment | optional | Section files attachment                  |
+| files    | attachment | optional | Lesson files attachment                  |
 
-**A section has one and only one**
+**A lesson has one and only one**
 
 - engagement
 - or assignment

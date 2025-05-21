@@ -50,11 +50,11 @@ Your platform needs to provide the following API to retrieve your course content
         "locale": "en",
         "last_updated_at" : "2025-05-21 16:55:00"
     },
-    "lessons": [
+    "modules": [
         {
             "title": "Lesson 1 title",
             "description":"Nostrud irure ullamco adipisicing qui dolor commodo. Anim exercitation velit tempor reprehenderit dolore.",
-            "sections":[
+            "lessons": [
                 {
                     "title": "Section 1.1 title",
                     "type": "engagement",
