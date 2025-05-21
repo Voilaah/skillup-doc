@@ -5,12 +5,9 @@ editLink: true
 
 # SkillUp Guide
 
-Welcome to the official documentation of the **SkillUp** platform, the all-inclusive e-learning solution
-for the Laravel-based OctoberCMS.
+Welcome to the official documentation of the **SkillUp** platform, the all-inclusive e-learning solution for the Laravel-based OctoberCMS.
 
-On the following pages you will find all the information you need to install the plugin on your
-website and integrate it in your used theme. You will also read about the individual models,
-controllers and how you can extend them to integrate your own functions.
+On the following pages you will find all the information you need to install the plugin on your website and integrate it in your used theme. You will also read about the individual models, controllers and how you can extend them to integrate your own functions.
 
 > [!NOTE]
 > If you think, that some details are missing or not sufficiently well explained, we invite you to
