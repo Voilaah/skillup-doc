@@ -8,7 +8,6 @@ composer.phar
 auth.json
 php_errors.log
 composer.lock
-package-lock.json
 /node_modules
 
 # Project
