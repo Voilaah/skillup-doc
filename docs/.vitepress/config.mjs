@@ -6,11 +6,23 @@ export default defineConfig({
   description: "Official SkillUp Global Documentation for features, backend users and API integration",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
-
+    logo: {
+        light: 'skillup-logo-dark.png',
+        dark: 'skillup-logo-light.png'
+    },
+    siteTitle: false,
+    lastUpdated: {
+          text: 'Last updated'
+      },
+      externalLinkIcon: true,
+      search: {
+          provider: 'local'
+      },
+      nav: [
+          { text: 'Home', link: '/' },
+          { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
+          { text: 'Development', link: '/development/', activeMatch: '/development/' }
+      ],
     sidebar: [
       {
         text: 'Examples',

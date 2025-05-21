@@ -3,20 +3,17 @@
 layout: home
 
 hero:
-  name: "SkillUp Documentation"
-  text: "Learn. Grow. Succeed."
-  tagline: The all-inclusive e-learning solution.
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-    - theme: alt
-      text: Visit Website
-      link: https://skillup.global
-      target: _blank
+    name: "SkillUp"
+    text: "Learn. Grow. Succeed."
+    tagline: The all-inclusive e-learning solution.
+    actions:
+        - theme: brand
+          text: Getting Started
+          link: /guide/index
+        - theme: alt
+          text: Visit Website
+          link: https://skillup.global
+          target: _blank
 
 features:
     - title: Your digital learning platform
@@ -26,4 +23,3 @@ features:
     - title: Much more, directly included
       details: Stripe payment, Multi-Language, Reviews, Students, Teachers, Content Creator, E-Mail notification, ...
 ---
-
