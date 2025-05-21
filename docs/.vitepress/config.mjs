@@ -5,7 +5,7 @@ export default defineConfig({
   title: "SkillUp Documentation",
   description: "Official SkillUp Global Documentation for features, backend users and API integration",
   lang: 'en-US',
-  base: '/skillup-docs/',
+//   base: '/skillup-docs/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
