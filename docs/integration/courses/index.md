@@ -7,8 +7,8 @@ Once setup in our SkillUp backend, the platform will be able to fetch your cours
 First, have a read through the [SkillUp Course Data Structure](/integration/courses/structure) to better understand our platform.
 
 Then to be able to integrate your courses, SkillUp requires only two APIs from your platform:
-- [one to fetch your courses list](/integration/courses/list)
-- [one to fetch a course detail](/integration/courses/item)
+* [one to fetch your courses list](/integration/courses/list)
+* [one to fetch a course detail](/integration/courses/item)
 
 ## Integration Strategy
 
@@ -19,6 +19,6 @@ In case you are updating your courses after being integrated inside SkillUp, a s
 - there are new courses (based on the existence of `id`)
 - existing courses have been updated (based on the value of `last_updated_at`)
 
-### Manual
+### On-Demand
 
 Also, a SkillUp admin has the possibility to run a course update manually from SkillUp backend performing a call to the [Course Content](/integration/courses/content) API.
