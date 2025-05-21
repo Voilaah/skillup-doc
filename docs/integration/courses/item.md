@@ -1,10 +1,6 @@
-<script setup>
-import BadgeStd from '../../.vitepress/components/BadgeStd.vue'
-</script>
-
 # Course content
 
-<BadgeStd label="Page is Work in Progress" color="danger" />
+<Badge type="warning">Page is Work in Progress</Badge>
 
 SkillUp can import a course content directly from your platform.
 
@@ -18,12 +14,13 @@ Only the course medias (such as images, videos, audios, files upload) won't be i
 
 Your platform needs to provide the following API to retrieve your course content.
 
-<BadgeStd label="GET" color="tip" /> `https://your-external-platform.com/api/v1/courses/{id}`
+<Badge>GET</Badge> `https://your-external-platform.com/api/v1/courses/{id}`
 
 **Query parameters**
 | Field | Type | Default | Description |
 |---|---|---|---|
 | id | number | required | Course Id to retrieve from your platform |
+
 
 ```jsonc
 {

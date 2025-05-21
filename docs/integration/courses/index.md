@@ -1,10 +1,6 @@
-<script setup>
-import BadgeStd from '../../.vitepress/components/BadgeStd.vue'
-</script>
-
 # Getting Started
 
-<BadgeStd label="Page is Work in Progress" color="danger" />
+<Badge type="warning">Page is Work in Progress</Badge>
 
 Once setup in our SkillUp backend, the platform will be able to fetch your courses list and courses details.
 

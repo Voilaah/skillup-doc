@@ -1,3 +1,3 @@
-# Students Integration
+# Getting Started
 
-SkillUp can perform import your students in the SkillUp platform:
+SkillUp can perform import your students in the SkillUp platform.

@@ -1,10 +1,6 @@
-<script setup>
-import BadgeStd from '../../.vitepress/components/BadgeStd.vue'
-</script>
-
 # Webhook
 
-<BadgeStd label="Page is Work in Progress" color="danger" />
+<Badge type="warning">Page is Work in Progress</Badge>
 
 ## Course content webhook
 
@@ -14,16 +10,3 @@ Webhooks are useful when you want to connect to the SkillUp platform from your p
 
 Triggered by specific events on your platform (ex: course creation, course update, course deletion, lesson creation, lesson update, lesson deletion...), webhooks automate communication between APIs and can be used to update SkillUp platform.
 
-
-## Course creation
-
-<BadgeStd label="POST" color="tip" /> `https://skillup.global/api/v1/courses/create`
-
-## Course update
-
-<BadgeStd label="PUT" color="tip" /> `https://skillup.global/api/v1/courses/{id}`
-
-
-## Course deletion
-
-<BadgeStd label="DELETE" color="tip" /> `https://skillup.global/api/v1/courses/{id}`

@@ -86,7 +86,13 @@ export default defineConfig({
                 { text: "Course", link: "/integration/courses/item" }
               ]
             },
-            { text: "Webhook", link: "/integration/courses/webhook" }
+            { text: "Webhook", link: "/integration/courses/webhook",
+              items: [
+                { text: "Course Create", link: "/integration/courses/create" },
+                { text: "Course Update", link: "/integration/courses/update" },
+                { text: "Course Delete", link: "/integration/courses/delete" }
+              ]
+             }
           ],
         },
         {
@@ -94,16 +100,21 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
-              text: "Students", link: "/integration/students/index"
+              text: "Getting Started", link: "/integration/students/index"
             },
             {
               text: "API Requirements",
               items: [
-                { text: "Students ", link: "/integration/students/list" },
+                { text: "Students", link: "/integration/students/list" },
                 { text: "Student", link: "/integration/students/item" }
               ]
             },
-            { text: "Webhook", link: "/integration/students/webhook" }
+            { text: "Webhook", link: "/integration/students/webhook",
+              items: [
+                { text: "Student Create", link: "/integration/students/create" },
+                { text: "Student Update", link: "/integration/students/update" }
+              ]
+             }
           ],
         },
       ],
@@ -134,6 +145,10 @@ export default defineConfig({
           ],
         },
       ],
+    },
+    footer: {
+      message: '',
+      copyright: 'Copyright © 2025 <a href="https://skillhup.global">SkillUp Global</a>'
     },
     socialLinks: [
       {

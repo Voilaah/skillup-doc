@@ -1,10 +1,6 @@
-<script setup>
-import BadgeStd from '../../.vitepress/components/BadgeStd.vue'
-</script>
-
 # Courses list
 
-<BadgeStd label="Page is Work in Progress" color="danger" />
+<Badge type="warning">Page is Work in Progress</Badge>
 
 SkillUp can import all or part of your courses directly from your platform.
 
@@ -12,7 +8,7 @@ SkillUp can import all or part of your courses directly from your platform.
 
 Your platform needs to provide the following API to retrieve your courses list.
 
-<BadgeStd label="GET" color="tip" /> `https://your-external-platform.com/api/v1/courses`
+<Badge>GET</Badge> `https://your-external-platform.com/api/v1/courses`
 
 The API needs to respond to the following specifications:
 
