@@ -1,6 +1,5 @@
 <script setup>
 import BadgeStd from '../../.vitepress/components/BadgeStd.vue'
-import SpoilerStd from '../../.vitepress/components/SpoilerStd.vue'
 </script>
 
 # Course content
@@ -44,10 +43,6 @@ SkillUp course required fields
 In terms of relationships, a SkillUp course has many _lessons_.
 
 And each _lesson_ has many _sections_.
-
-<!-- <SpoilerStd label="Details"> -->
-
-<!-- <br /> -->
 
 #### Lesson
 
@@ -124,7 +119,7 @@ SkillUp handles different types of questions:
 - true / false
 - multiple choices
 
-<!-- </SpoilerStd> -->
+<br/>
 
 ::: details Complete Example
 
