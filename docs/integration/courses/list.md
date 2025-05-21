@@ -22,7 +22,7 @@ The API needs to respond to the following specifications:
 | page | number | 1 | Page number to retrieve |
 | per_page | number | 10 | Number of courses to retrieve |
 
-```json
+```jsonc
 {
     "total": 52,
     "per_page": 10,

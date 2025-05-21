@@ -9,13 +9,15 @@ import SpoilerStd from '../../.vitepress/components/SpoilerStd.vue'
 
 SkillUp can import a course content directly from your platform.
 
+::: warning
 Only the course medias (such as images, videos, audios, files upload) won't be imported.
+:::
 
 ## SkillUp Course Content Structure
 
 ### Structure
 
-A SkillUp course required fields
+SkillUp course required fields
 
 | Field           | Type    | Default  | Description                              |
 | --------------- | ------- | -------- | ---------------------------------------- |
@@ -176,7 +178,7 @@ GET `https://your-external-platform.com/api/v1/courses/{id}`
 |---|---|---|---|
 | id | number | required | Course Id to retrieve from your platform |
 
-```json
+```jsonc
 {
     "id": 1,
     "code": "001",
