@@ -41,7 +41,6 @@ The API needs to respond to the following specifications:
             "skills": "Dolor commodo aliquip veniam labore amet elit. Laboris culpa quis id consequat voluptate officia tempor consectetur aliquip duis laborum occaecat.",
             "inclusion": "Dolor commodo aliquip veniam labore amet elit. Laboris culpa quis id consequat voluptate officia tempor consectetur aliquip duis laborum occaecat.",
             "url": "https://your-external-platform.com/courses/123456",
-            "last_updated_at" : "2025-05-21 16:55:00",
             "meta" : {
                 "duration": 150,
                 "organization": "Organization name",
@@ -52,7 +51,8 @@ The API needs to respond to the following specifications:
                 "has_certificate": true,
                 "is_free": true,
                 "price": null,
-                "locale": "en"
+                "locale": "en",
+                "last_updated_at" : "2025-05-21 16:55:00"
             }
         },
     ]

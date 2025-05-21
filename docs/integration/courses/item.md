@@ -47,7 +47,8 @@ Your platform needs to provide the following API to retrieve your course content
         "has_certificate": true,
         "is_free": true,
         "price": null,
-        "locale": "en"
+        "locale": "en",
+        "last_updated_at" : "2025-05-21 16:55:00"
     },
     "lessons": [
         {
