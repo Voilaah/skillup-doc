@@ -70,17 +70,11 @@ export default defineConfig({
             ],
             '/development/': [
                 {
-                    text: 'Working with Mall',
+                    text: 'Working with SkillUp',
                     collapsed: false,
                     items: [
-                        { text: 'Product Model', link: '/development/core/product-model' },
-                        { text: 'Variant Model', link: '/development/core/variant-model' },
-                        { text: 'Order Model', link: '/development/core/order-model' },
-                        { text: 'Cart Model', link: '/development/core/cart-model' },
-                        { text: 'Wishlist Model', link: '/development/core/wishlist-model' },
-                        { text: 'Payment Providers', link: '/development/core/payment-providers' },
-                        { text: 'Pricing Information', link: '/development/core/pricing-information' },
-                        { text: 'Price Bag', link: '/development/core/price-bag' },
+                        { text: 'Course Model', link: '/development/core/course-model' },
+                        { text: 'Enrollment Model', link: '/development/core/enrollment-model' },
                         { text: 'Events', link: '/development/core/events' },
                         { text: 'PDF', link: '/development/core/pdf' },
                         { text: 'Integration', link: '/development/core/integration' },
