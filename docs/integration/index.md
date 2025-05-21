@@ -1,10 +1,4 @@
-<script setup>
-import BadgeStd from '../.vitepress/components/BadgeStd.vue'
-</script>
-
 # Integration
-
-<BadgeStd label="Page is Work in Progress" color="danger" />
 
 SkillUp can perform two types of integration:
 
