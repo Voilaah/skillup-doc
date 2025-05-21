@@ -45,6 +45,7 @@ The API needs to respond to the following specifications:
             "skills": "Dolor commodo aliquip veniam labore amet elit. Laboris culpa quis id consequat voluptate officia tempor consectetur aliquip duis laborum occaecat.",
             "inclusion": "Dolor commodo aliquip veniam labore amet elit. Laboris culpa quis id consequat voluptate officia tempor consectetur aliquip duis laborum occaecat.",
             "url": "https://your-external-platform.com/courses/123456",
+            "last_updated_at" : "2025-05-21 16:55:00",
             "meta" : {
                 "duration": 150,
                 "organization": "Organization name",
@@ -66,7 +67,7 @@ The API needs to respond to the following specifications:
 
 In case you are updating your courses after being integrated inside SkillUp, a scheduled worker will scan at a predefined frequence your courses list API to detect if:
 
-- there are new courses
-- existing courses have been updated
+- there are new courses (based on the existence of `id`)
+- existing courses have been updated (based on the value of `last_updated_at`)
 
 Also, a SkillUp admin has the possibility to run a course update manually from SkillUp backend performing a call to the [Course Content](/integration/courses/content) API.
