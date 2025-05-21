@@ -45,7 +45,6 @@ SkillUp also requires the following PHP packages, which should be installed auto
 - [laravel/socialite](https://packagist.org/packages/laravel/socialite) v5.1+
 - [mews/captcha](https://packagist.org/packages/hashids/hashids) v3.4
 
-
 ### Optional dependencies
 
 The following dependencies are only required if necessary, but must be installed manually if needed.
@@ -61,5 +60,5 @@ The following dependencies are only required when developing or extending the Sk
 
 ## Links
 
-- [Demo Website](https://skillup.global)
-- SkillUp Plugin - [GitHub](https://github.com/voilaah/oc-skillup-plugin)
+- [Website](https://skillup.global)
+- SkillUp Docs - [GitHub](https://github.com/voilaah/skillup-docs)

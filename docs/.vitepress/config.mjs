@@ -124,7 +124,7 @@ export default defineConfig({
       },
       {
         icon: "github",
-        link: "https://github.com/voilaah/oc-skillup-plugin",
+        link: "https://github.com/voilaah/skillup-docs",
       },
     ],
   },
