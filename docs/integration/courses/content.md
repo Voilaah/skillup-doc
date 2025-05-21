@@ -30,11 +30,11 @@ A SkillUp course required fields
 | url             | string  | required | The course url on your platform          |
 | duration        | ?number | optional | Course duration in minutes               |
 | organization    | string  | required | Organization                             |
-| level           | enum    | required | [beginner, intermediate, advanced]       |
+| level           | enum    | required | beginner\|intermediate\|advanced         |
 | category        | string  | required | Course Category                          |
-| is_coming_soon  | boolean | required | Course is upcoming ?                     |
-| is_published    | boolean | true     | Course is published ?                    |
-| has_certificate | boolean | true     | Course has a certificate ?               |
+| is_coming_soon  | boolean | required | Course is upcoming?                      |
+| is_published    | boolean | true     | Course is published?                     |
+| has_certificate | boolean | true     | Course has a certificate?                |
 | is_free         | boolean | true     | Course                                   |
 | price           | ?number | optional | Course price if not free                 |
 | locale          | string  | required | Course language `en` or `th`             |
@@ -91,23 +91,27 @@ A quiz can be **graded** or **not**.
 
 **Quiz fields**
 
-| Field     | Type    | Default  | Description                            |
-| --------- | ------- | -------- | -------------------------------------- |
-| id        | number  | required | Quiz Id to retrieve from your platform |
-| title     | string  | required | Quiz title                             |
-| graded    | boolean | true     | Quiz is graded?                        |
-| questions | array   | required | Quiz questions                         |
+| Field         | Type    | Default  | Description                                  |
+| ------------- | ------- | -------- | -------------------------------------------- |
+| id            | number  | required | Quiz Id to retrieve from your platform       |
+| title         | string  | required | Quiz title                                   |
+| graded        | boolean | true     | Quiz is graded?                              |
+| weight        | number  | 1        | Quiz weight in the final grading calculation |
+| passing_score | number  | 50       | Percentage to pass the quiz                  |
+| questions     | array   | required | Quiz questions                               |
 
 **Question**
 
 **Question fields**
 
-| Field | Type    | Default  | Description                                            |
-| ----- | ------- | -------- | ------------------------------------------------------ |
-| id    | number  | required | Question Id to retrieve from your platform             |
-| title | string  | required | Question title                                         |
-| image | ?string | optional | Question image displayed below the question title      |
-| type  | enum    | required | Question type: [openanswer, truefalse, multiplechoice] |
+| Field   | Type    | Default  | Description                                       |
+| ------- | ------- | -------- | ------------------------------------------------- |
+| id      | number  | required | Question Id to retrieve from your platform        |
+| title   | string  | required | Question title                                    |
+| image   | ?string | optional | Question image displayed below the question title |
+| type    | enum    | required | openanswer\|truefalse\|multiplechoices\|dragndrop |
+| choices | ?array  | optional | An array of possible choices                      |
+| answer  | ?string | optional | The correct answer                                |
 
 A question has a title and an media image optionnaly.
 
