@@ -18,7 +18,7 @@ Only the course medias (such as images, videos, audios, files upload) won't be i
 
 Your platform needs to provide the following API to retrieve your course content.
 
-GET `https://your-external-platform.com/api/v1/courses/{id}`
+<BadgeStd label="GET" color="tip" /> `https://your-external-platform.com/api/v1/courses/{id}`
 
 **Query parameters**
 | Field | Type | Default | Description |

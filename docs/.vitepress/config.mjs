@@ -79,15 +79,32 @@ export default defineConfig({
           items: [
             { text: "Getting Started", link: "/integration/courses" },
             { text: "Data Structure", link: "/integration/courses/structure" },
-            { text: "Courses List API", link: "/integration/courses/list" },
-            { text: "Course Content API", link: "/integration/courses/content" },
+            {
+              text: "API Requirements",
+              items: [
+                { text: "Courses ", link: "/integration/courses/list" },
+                { text: "Course", link: "/integration/courses/item" }
+              ]
+            },
             { text: "Webhook", link: "/integration/courses/webhook" }
           ],
         },
         {
           text: "Students Integration",
           collapsed: false,
-          items: [{ text: "Students", link: "/integration/students/index" }],
+          items: [
+            {
+              text: "Students", link: "/integration/students/index"
+            },
+            {
+              text: "API Requirements",
+              items: [
+                { text: "Students ", link: "/integration/students/list" },
+                { text: "Student", link: "/integration/students/item" }
+              ]
+            },
+            { text: "Webhook", link: "/integration/students/webhook" }
+          ],
         },
       ],
       "/development/": [

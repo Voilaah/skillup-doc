@@ -6,14 +6,15 @@ import BadgeStd from '../../.vitepress/components/BadgeStd.vue'
 
 <BadgeStd label="Page is Work in Progress" color="danger" />
 
-In terms of relationships:
+::: info IMPORTANT DEFINITION
 
-- A course has many *lessons*.
+- A SkillUp course has many *lessons*.
     - A lesson has many *sections*.
         - A section has one:
             - engagement
             - or assignment
             - or summary
+:::
 
 ## SkillUp Course Data Structure
 

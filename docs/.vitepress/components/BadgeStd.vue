@@ -18,7 +18,7 @@ defineProps<{
 <style scoped>
 .badge {
     margin: 0.5rem 0;
-    display: flex;
+    display: inline-flex;
 }
 
 .badge-inner {
