@@ -17,8 +17,7 @@ On the following pages you will find all the information you need to install the
 
 ## Requirements
 
-We highly recommend using the latest OctoberCMS v3 and PHP v8 versions available, however, the
-following requirements represent the minimum needed to run Mall on your website.
+We highly recommend using the latest OctoberCMS v3 and PHP v8 versions available, however, the following requirements represent the minimum needed to run Mall on your website.
 
 - OctoberCMS v3.0+
 - PHP v8.0+
@@ -40,8 +39,7 @@ SkillUp relies on the following official OctoberCMS Plugins, which must be insta
 - [Dubk0ff.UniCrumbs](https://github.com/dubk0ff/unicrumbs-plugin) v2.0+
 - [OFFLINE.Boxes](https://octobercms.com/plugin/offline-boxes) v3.5+
 
-SkillUp also requires the following PHP packages, which should be installed automatically, when
-installing SkillUp via `plugin:install` or `project:sync` on OctoberCMS v3 installations.
+SkillUp also requires the following PHP packages, which should be installed automatically, when installing SkillUp via `plugin:install` or `project:sync` on OctoberCMS v3 installations.
 
 - [barryvdh/laravel-dompdf](https://packagist.org/packages/barryvdh/laravel-dompdf) v1.0+ | v2.0+
 - [laravel/socialite](https://packagist.org/packages/laravel/socialite) v5.1+
