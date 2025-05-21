@@ -97,7 +97,7 @@ export default defineConfig({
         },
         {
           text: "Students Integration",
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: "Getting Started", link: "/integration/students/index"
