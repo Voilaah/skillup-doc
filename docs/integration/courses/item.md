@@ -4,11 +4,13 @@
 
 SkillUp can import a course content directly from your platform.
 
+::: info INFO
+This API allows SkillUp to display and manage the entire course curriculum.
+:::
+
 ::: info IMPORTANT
 Only the course medias (such as images, videos, audios, files upload) won't be imported.
 :::
-
-
 
 ## API requirements
 
@@ -20,7 +22,6 @@ Your platform needs to provide the following API to retrieve your course content
 | Field | Type | Default | Description |
 |---|---|---|---|
 | id | number | required | Course Id to retrieve from your platform |
-
 
 ```jsonc
 {
