@@ -23,6 +23,9 @@ Your platform needs to provide the following API to retrieve your course content
 |---|---|---|---|
 | id | number | required | Course Id to retrieve from your platform |
 
+<br/>
+**API returns**
+
 ```jsonc
 {
     "id": 1,

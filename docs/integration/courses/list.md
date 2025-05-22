@@ -5,7 +5,7 @@
 SkillUp can import all or part of your courses directly from your platform.
 
 ::: info INFO
-This API allows SkillUp to display the list of your courses and their course preview page giving minimum information to the students before enrolling.
+This API allows SkillUp to display the list of your courses and their respective course preview page giving minimum information to the students before enrolling.
 :::
 
 ## API requirements
@@ -21,6 +21,9 @@ The API needs to respond to the following specifications:
 |---|---|---|---|
 | page | number | 1 | Page number to retrieve |
 | per_page | number | 10 | Number of courses to retrieve |
+
+<br/>
+**API returns**
 
 ```jsonc
 {
