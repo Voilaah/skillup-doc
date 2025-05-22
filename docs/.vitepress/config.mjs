@@ -77,8 +77,17 @@ export default defineConfig({
           text: "Courses Integration",
           collapsed: false,
           items: [
-            { text: "Getting Started", link: "/integration/courses" },
-            { text: "Data Structure", link: "/integration/courses/structure" },
+            { text: "Getting Started", link: "/integration/courses/" },
+            { text: "Data Model", link: "/integration/courses/models/",
+              items: [
+                { text: "Course", link: "/integration/courses/models/course" },
+                { text: "Module", link: "/integration/courses/models/module" },
+                { text: "Lesson", link: "/integration/courses/models/lesson" },
+                { text: "Engagement", link: "/integration/courses/models/engagement" },
+                { text: "Assignment", link: "/integration/courses/models/assignment" },
+                { text: "Summary", link: "/integration/courses/models/summary" },
+              ]
+             },
             {
               text: "API Requirements",
               items: [
