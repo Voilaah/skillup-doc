@@ -10,8 +10,8 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
-      light: "/public/skillup-logo-dark.png",
-      dark: "/public/skillup-logo-light.png",
+      light: "/skillup-logo-dark.png",
+      dark: "/skillup-logo-light.png",
     },
     siteTitle: false,
     lastUpdated: {
