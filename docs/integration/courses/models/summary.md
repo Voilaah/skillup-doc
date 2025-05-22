@@ -13,4 +13,4 @@
 :::
 
 
-A summary is rich text content.
+**A summary is rich text content.**

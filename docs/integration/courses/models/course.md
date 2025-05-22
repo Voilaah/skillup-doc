@@ -12,7 +12,7 @@
             - or summary
 :::
 
-SkillUp course required fields
+**SkillUp course fields**
 
 | Field           | Type    | Default  | Description                              |
 | --------------- | ------- | -------- | ---------------------------------------- |
