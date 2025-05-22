@@ -86,7 +86,7 @@ export default defineConfig({
                 { text: "Course", link: "/integration/courses/item" }
               ]
             },
-            { text: "Webhook", link: "/integration/courses/webhook",
+            { text: "Webhooks", link: "/integration/courses/webhooks",
               items: [
                 { text: "Create a course", link: "/integration/courses/create" },
                 { text: "Update a course", link: "/integration/courses/update" },
@@ -113,7 +113,7 @@ export default defineConfig({
                 { text: "Student", link: "/integration/students/item" }
               ]
             },
-            { text: "Webhook", link: "/integration/students/webhook",
+            { text: "Webhooks", link: "/integration/students/webhooks",
               items: [
                 { text: "Create a student", link: "/integration/students/create" },
                 { text: "Update a student", link: "/integration/students/update" }
