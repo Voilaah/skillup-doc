@@ -61,4 +61,4 @@ The following dependencies are only required when developing or extending the Sk
 ## Links
 
 - [Website](https://skillup.global)
-- SkillUp Docs - [GitHub](https://github.com/voilaah/skillup-docs)
+- [SkillUp Docs](https://docs.skillup.globals)
