@@ -1,6 +1,6 @@
+import { writeFileSync } from "fs";
+import { resolve } from "path";
 import { defineConfig } from "vitepress";
-import { writeFileSync } from 'fs'
-import { resolve } from 'path'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -8,9 +8,9 @@ export default defineConfig({
   description:
     "Official SkillUp Global Documentation for features, backend users and API integration",
   lang: "en-US",
-  base: "/skillup-docs/",
+  // base: "/skillup-docs/",
   buildEnd() {
-    writeFileSync(resolve(__dirname, 'dist/CNAME'), 'docs.skillup.global')
+    writeFileSync(resolve(__dirname, "dist/CNAME"), "docs.skillup.global");
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -83,39 +83,71 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: "Getting Started", link: "/integration/courses/" },
-            { text: "Data Model",
+            {
+              text: "Data Model",
               link: "/integration/courses/models/",
               collapsed: true,
               items: [
                 { text: "Course", link: "/integration/courses/models/course" },
                 { text: "Module", link: "/integration/courses/models/module" },
                 { text: "Lesson", link: "/integration/courses/models/lesson" },
-                { text: "Engagement", link: "/integration/courses/models/engagement" },
-                { text: "Assignment", link: "/integration/courses/models/assignment" },
-                { text: "Summary", link: "/integration/courses/models/summary" },
-              ]
-             },
+                {
+                  text: "Engagement",
+                  link: "/integration/courses/models/engagement",
+                },
+                {
+                  text: "Assignment",
+                  link: "/integration/courses/models/assignment",
+                },
+                {
+                  text: "Summary",
+                  link: "/integration/courses/models/summary",
+                },
+              ],
+            },
             {
               text: "API Requirements",
               collapsed: true,
               items: [
                 { text: "Courses ", link: "/integration/courses/list" },
-                { text: "Course", link: "/integration/courses/item" }
-              ]
+                { text: "Course", link: "/integration/courses/item" },
+              ],
             },
-            { text: "Webhooks",
+            {
+              text: "Webhooks",
               link: "/integration/courses/webhooks",
               collapsed: true,
               items: [
-                { text: "Create a course", link: "/integration/courses/create" },
-                { text: "Update a course", link: "/integration/courses/update" },
-                { text: "Delete a course", link: "/integration/courses/delete" },
-                { text: "Create a module", link: "/integration/courses/module_create" },
-                { text: "Update a module", link: "/integration/courses/module_update" },
-                { text: "Create a lesson", link: "/integration/courses/lesson_create" },
-                { text: "Update a lesson", link: "/integration/courses/lesson_update" },
-              ]
-             }
+                {
+                  text: "Create a course",
+                  link: "/integration/courses/create",
+                },
+                {
+                  text: "Update a course",
+                  link: "/integration/courses/update",
+                },
+                {
+                  text: "Delete a course",
+                  link: "/integration/courses/delete",
+                },
+                {
+                  text: "Create a module",
+                  link: "/integration/courses/module_create",
+                },
+                {
+                  text: "Update a module",
+                  link: "/integration/courses/module_update",
+                },
+                {
+                  text: "Create a lesson",
+                  link: "/integration/courses/lesson_create",
+                },
+                {
+                  text: "Update a lesson",
+                  link: "/integration/courses/lesson_update",
+                },
+              ],
+            },
           ],
         },
         {
@@ -123,21 +155,30 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "Getting Started", link: "/integration/students/index"
+              text: "Getting Started",
+              link: "/integration/students/index",
             },
             {
               text: "API Requirements",
               items: [
                 { text: "Students", link: "/integration/students/list" },
-                { text: "Student", link: "/integration/students/item" }
-              ]
+                { text: "Student", link: "/integration/students/item" },
+              ],
             },
-            { text: "Webhooks", link: "/integration/students/webhooks",
+            {
+              text: "Webhooks",
+              link: "/integration/students/webhooks",
               items: [
-                { text: "Create a student", link: "/integration/students/create" },
-                { text: "Update a student", link: "/integration/students/update" }
-              ]
-             }
+                {
+                  text: "Create a student",
+                  link: "/integration/students/create",
+                },
+                {
+                  text: "Update a student",
+                  link: "/integration/students/update",
+                },
+              ],
+            },
           ],
         },
       ],
@@ -170,8 +211,9 @@ export default defineConfig({
       ],
     },
     footer: {
-      message: '',
-      copyright: 'Copyright © 2025 <a href="https://skillhup.global">SkillUp Global</a>'
+      message: "",
+      copyright:
+        'Copyright © 2025 <a href="https://skillhup.global">SkillUp Global</a>',
     },
     socialLinks: [
       {
