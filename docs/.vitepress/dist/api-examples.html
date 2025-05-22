@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Runtime API Examples | SkillUp Documentation</title>
+    <meta name="description" content="Official SkillUp Global Documentation for features, backend users and API integration">
+    <meta name="generator" content="VitePress v1.6.3">
+    <link rel="preload stylesheet" href="/skillup-docs/assets/style.Apg-eXNo.css" as="style">
+    <link rel="preload stylesheet" href="/skillup-docs/vp-icons.css" as="style">
+    
+    <script type="module" src="/skillup-docs/assets/app.CQFnmzry.js"></script>
+    <link rel="preload" href="/skillup-docs/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/skillup-docs/assets/chunks/theme.4BjfZjBm.js">
+    <link rel="modulepreload" href="/skillup-docs/assets/chunks/framework.BF2kbpUJ.js">
+    <link rel="modulepreload" href="/skillup-docs/assets/api-examples.md.BuKtlJ-V.lean.js">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-5d98c3a5><!--[--><!--]--><!--[--><span tabindex="-1" data-v-0b0ada53></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-0b0ada53>Skip to content</a><!--]--><!----><header class="VPNav" data-v-5d98c3a5 data-v-ae24b3ad><div class="VPNavBar" data-v-ae24b3ad data-v-6aa21345><div class="wrapper" data-v-6aa21345><div class="container" data-v-6aa21345><div class="title" data-v-6aa21345><div class="VPNavBarTitle" data-v-6aa21345 data-v-1168a8e4><a class="title" href="/skillup-docs/" data-v-1168a8e4><!--[--><!--]--><!--[--><!--[--><!--[--><img class="VPImage dark logo" src="/skillup-docs/skillup-logo-light.png" alt data-v-8426fc1a><!--]--><!--[--><img class="VPImage light logo" src="/skillup-docs/skillup-logo-dark.png" alt data-v-8426fc1a><!--]--><!--]--><!--]--><!----><!--[--><!--]--></a></div></div><div class="content" data-v-6aa21345><div class="content-body" data-v-6aa21345><!--[--><!--]--><div class="VPNavBarSearch search" data-v-6aa21345><!--[--><!----><div id="local-search"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-6aa21345 data-v-dc692963><span id="main-nav-aria-label" class="visually-hidden" data-v-dc692963> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/skillup-docs/" tabindex="0" data-v-dc692963 data-v-e56f3d57><!--[--><span data-v-e56f3d57>Home</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/skillup-docs/guide/" tabindex="0" data-v-dc692963 data-v-e56f3d57><!--[--><span data-v-e56f3d57>Guide</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/skillup-docs/integration/" tabindex="0" data-v-dc692963 data-v-e56f3d57><!--[--><span data-v-e56f3d57>Integration</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/skillup-docs/development/" tabindex="0" data-v-dc692963 data-v-e56f3d57><!--[--><span data-v-e56f3d57>Development</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-6aa21345 data-v-6c893767><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-6c893767 data-v-5337faa4 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-5337faa4></span><span class="vpi-moon moon" data-v-5337faa4></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-6aa21345 data-v-0394ad82 data-v-7bc22406><!--[--><a class="VPSocialLink no-icon" href="https://octobercms.com/plugin/skillup" aria-label target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><svg width="100%" height="100%" viewBox="0 0 9 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" fill="currentColor"><path d="M7.42,4.068c-0.13,-2.124 -2.444,-3.962 -3.397,-3.983c-0.953,-0.02 -2.735,2.23 -2.808,4.515c-0.067,2.144 1.762,3.614 2.549,3.8c0.022,-1.008 0.103,-4.721 0.117,-5.154c0.028,-0.885 0.072,-2.261 0.219,-2.307c0.085,-0.026 0.201,0.748 0.186,1.205c-0.003,0.087 -0.004,0.37 -0.004,0.771c0.16,-0.162 0.326,-0.331 0.428,-0.43c0.277,-0.273 0.4,-0.24 0.267,0.003c-0.082,0.149 -0.435,0.647 -0.694,1.008c0.002,0.727 0.005,1.642 0.008,2.495c0.366,-0.429 0.814,-0.942 1.05,-1.171c0.494,-0.478 0.546,-0.418 0.313,0.085c-0.143,0.307 -0.843,1.129 -1.36,1.776c0.003,0.757 0.006,1.393 0.006,1.697c1.386,-0.305 3.248,-2.224 3.12,-4.31" /></svg></a><a class="VPSocialLink no-icon" href="https://github.com/voilaah/skillup-docs" aria-label="github" target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-6aa21345 data-v-bb2aa2f0 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-cf11d7a2><span class="vpi-more-horizontal icon" data-v-cf11d7a2></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><!----><!--[--><!--[--><!----><div class="group" data-v-bb2aa2f0><div class="item appearance" data-v-bb2aa2f0><p class="label" data-v-bb2aa2f0>Appearance</p><div class="appearance-action" data-v-bb2aa2f0><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-bb2aa2f0 data-v-5337faa4 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-5337faa4></span><span class="vpi-moon moon" data-v-5337faa4></span><!--]--></span></span></button></div></div></div><div class="group" data-v-bb2aa2f0><div class="item social-links" data-v-bb2aa2f0><div class="VPSocialLinks social-links-list" data-v-bb2aa2f0 data-v-7bc22406><!--[--><a class="VPSocialLink no-icon" href="https://octobercms.com/plugin/skillup" aria-label target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><svg width="100%" height="100%" viewBox="0 0 9 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" fill="currentColor"><path d="M7.42,4.068c-0.13,-2.124 -2.444,-3.962 -3.397,-3.983c-0.953,-0.02 -2.735,2.23 -2.808,4.515c-0.067,2.144 1.762,3.614 2.549,3.8c0.022,-1.008 0.103,-4.721 0.117,-5.154c0.028,-0.885 0.072,-2.261 0.219,-2.307c0.085,-0.026 0.201,0.748 0.186,1.205c-0.003,0.087 -0.004,0.37 -0.004,0.771c0.16,-0.162 0.326,-0.331 0.428,-0.43c0.277,-0.273 0.4,-0.24 0.267,0.003c-0.082,0.149 -0.435,0.647 -0.694,1.008c0.002,0.727 0.005,1.642 0.008,2.495c0.366,-0.429 0.814,-0.942 1.05,-1.171c0.494,-0.478 0.546,-0.418 0.313,0.085c-0.143,0.307 -0.843,1.129 -1.36,1.776c0.003,0.757 0.006,1.393 0.006,1.697c1.386,-0.305 3.248,-2.224 3.12,-4.31" /></svg></a><a class="VPSocialLink no-icon" href="https://github.com/voilaah/skillup-docs" aria-label="github" target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-6aa21345 data-v-e5dd9c1c><span class="container" data-v-e5dd9c1c><span class="top" data-v-e5dd9c1c></span><span class="middle" data-v-e5dd9c1c></span><span class="bottom" data-v-e5dd9c1c></span></span></button></div></div></div></div><div class="divider" data-v-6aa21345><div class="divider-line" data-v-6aa21345></div></div></div><!----></header><div class="VPLocalNav empty fixed" data-v-5d98c3a5 data-v-a6f0e41e><div class="container" data-v-a6f0e41e><!----><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-a6f0e41e data-v-8a42e2b4><button data-v-8a42e2b4>Return to top</button><!----></div></div></div><!----><div class="VPContent" id="VPContent" data-v-5d98c3a5 data-v-1428d186><div class="VPDoc has-aside" data-v-1428d186 data-v-39a288b8><!--[--><!--]--><div class="container" data-v-39a288b8><div class="aside" data-v-39a288b8><div class="aside-curtain" data-v-39a288b8></div><div class="aside-container" data-v-39a288b8><div class="aside-content" data-v-39a288b8><div class="VPDocAside" data-v-39a288b8 data-v-3f215769><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-3f215769 data-v-a5bbad30><div class="content" data-v-a5bbad30><div class="outline-marker" data-v-a5bbad30></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-a5bbad30>On this page</div><ul class="VPDocOutlineItem root" data-v-a5bbad30 data-v-b933a997><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-3f215769></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-39a288b8><div class="content-container" data-v-39a288b8><!--[--><!--]--><main class="main" data-v-39a288b8><div style="position:relative;" class="vp-doc _skillup-docs_api-examples external-link-icon-enabled" data-v-39a288b8><div><h1 id="runtime-api-examples" tabindex="-1">Runtime API Examples <a class="header-anchor" href="#runtime-api-examples" aria-label="Permalink to &quot;Runtime API Examples&quot;">​</a></h1><p>This page demonstrates usage of some of the runtime APIs provided by VitePress.</p><p>The main <code>useData()</code> API can be used to access site, theme, and page data for the current page. It works in both <code>.md</code> and <code>.vue</code> files:</p><div class="language-md vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;script setup&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">import { useData } from &#39;vitepress&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">const { theme, page, frontmatter } = useData()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;/script&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## Results</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Theme Data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ theme }}&lt;/pre&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Page Data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ page }}&lt;/pre&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Page Frontmatter</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ frontmatter }}&lt;/pre&gt;</span></span></code></pre></div><h2 id="results" tabindex="-1">Results <a class="header-anchor" href="#results" aria-label="Permalink to &quot;Results&quot;">​</a></h2><h3 id="theme-data" tabindex="-1">Theme Data <a class="header-anchor" href="#theme-data" aria-label="Permalink to &quot;Theme Data&quot;">​</a></h3><pre>{
+  &quot;logo&quot;: {
+    &quot;light&quot;: &quot;/skillup-logo-dark.png&quot;,
+    &quot;dark&quot;: &quot;/skillup-logo-light.png&quot;
+  },
+  &quot;siteTitle&quot;: false,
+  &quot;lastUpdated&quot;: {
+    &quot;text&quot;: &quot;Last updated&quot;
+  },
+  &quot;externalLinkIcon&quot;: true,
+  &quot;search&quot;: {
+    &quot;provider&quot;: &quot;local&quot;
+  },
+  &quot;nav&quot;: [
+    {
+      &quot;text&quot;: &quot;Home&quot;,
+      &quot;link&quot;: &quot;/&quot;
+    },
+    {
+      &quot;text&quot;: &quot;Guide&quot;,
+      &quot;link&quot;: &quot;/guide/&quot;,
+      &quot;activeMatch&quot;: &quot;/guide/&quot;
+    },
+    {
+      &quot;text&quot;: &quot;Integration&quot;,
+      &quot;link&quot;: &quot;/integration/&quot;,
+      &quot;activeMatch&quot;: &quot;/integration/&quot;
+    },
+    {
+      &quot;text&quot;: &quot;Development&quot;,
+      &quot;link&quot;: &quot;/development/&quot;,
+      &quot;activeMatch&quot;: &quot;/development/&quot;
+    }
+  ],
+  &quot;sidebar&quot;: {
+    &quot;/guide/&quot;: [
+      {
+        &quot;text&quot;: &quot;Introduction&quot;,
+        &quot;collapsed&quot;: false,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;Getting Started&quot;,
+            &quot;link&quot;: &quot;/guide/&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Installation&quot;,
+            &quot;link&quot;: &quot;/guide/introduction/installation&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Configuration&quot;,
+            &quot;link&quot;: &quot;/guide/introduction/configuration&quot;
+          }
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;Usage&quot;,
+        &quot;collapsed&quot;: false,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;Courses&quot;,
+            &quot;link&quot;: &quot;/guide/usage/properties&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Categories&quot;,
+            &quot;link&quot;: &quot;/guide/usage/categories&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Reviews&quot;,
+            &quot;link&quot;: &quot;/guide/usage/reviews&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Settings&quot;,
+            &quot;link&quot;: &quot;/guide/usage/settings&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Going Live&quot;,
+            &quot;link&quot;: &quot;/guide/usage/going-live&quot;
+          }
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;Components&quot;,
+        &quot;collapsed&quot;: true,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;Course&quot;,
+            &quot;link&quot;: &quot;/guide/components/product&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Courses&quot;,
+            &quot;link&quot;: &quot;/guide/components/products&quot;
+          },
+          {
+            &quot;text&quot;: &quot;CoursesFilter&quot;,
+            &quot;link&quot;: &quot;/guide/components/courses-filter&quot;
+          },
+          {
+            &quot;text&quot;: &quot;CourseReview&quot;,
+            &quot;link&quot;: &quot;/guide/components/course-reviews&quot;
+          },
+          {
+            &quot;text&quot;: &quot;MyAccount&quot;,
+            &quot;link&quot;: &quot;/guide/components/my-account&quot;
+          }
+        ]
+      }
+    ],
+    &quot;/integration/&quot;: [
+      {
+        &quot;text&quot;: &quot;Courses Integration&quot;,
+        &quot;collapsed&quot;: false,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;Getting Started&quot;,
+            &quot;link&quot;: &quot;/integration/courses/&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Data Model&quot;,
+            &quot;link&quot;: &quot;/integration/courses/models/&quot;,
+            &quot;items&quot;: [
+              {
+                &quot;text&quot;: &quot;Course&quot;,
+                &quot;link&quot;: &quot;/integration/courses/models/course&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Module&quot;,
+                &quot;link&quot;: &quot;/integration/courses/models/module&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Lesson&quot;,
+                &quot;link&quot;: &quot;/integration/courses/models/lesson&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Engagement&quot;,
+                &quot;link&quot;: &quot;/integration/courses/models/engagement&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Assignment&quot;,
+                &quot;link&quot;: &quot;/integration/courses/models/assignment&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Summary&quot;,
+                &quot;link&quot;: &quot;/integration/courses/models/summary&quot;
+              }
+            ]
+          },
+          {
+            &quot;text&quot;: &quot;API Requirements&quot;,
+            &quot;items&quot;: [
+              {
+                &quot;text&quot;: &quot;Courses &quot;,
+                &quot;link&quot;: &quot;/integration/courses/list&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Course&quot;,
+                &quot;link&quot;: &quot;/integration/courses/item&quot;
+              }
+            ]
+          },
+          {
+            &quot;text&quot;: &quot;Webhooks&quot;,
+            &quot;link&quot;: &quot;/integration/courses/webhooks&quot;,
+            &quot;items&quot;: [
+              {
+                &quot;text&quot;: &quot;Create a course&quot;,
+                &quot;link&quot;: &quot;/integration/courses/create&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Update a course&quot;,
+                &quot;link&quot;: &quot;/integration/courses/update&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Delete a course&quot;,
+                &quot;link&quot;: &quot;/integration/courses/delete&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Create a module&quot;,
+                &quot;link&quot;: &quot;/integration/courses/module_create&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Update a module&quot;,
+                &quot;link&quot;: &quot;/integration/courses/module_update&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Create a lesson&quot;,
+                &quot;link&quot;: &quot;/integration/courses/lesson_create&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Update a lesson&quot;,
+                &quot;link&quot;: &quot;/integration/courses/lesson_update&quot;
+              }
+            ]
+          }
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;Students Integration&quot;,
+        &quot;collapsed&quot;: true,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;Getting Started&quot;,
+            &quot;link&quot;: &quot;/integration/students/index&quot;
+          },
+          {
+            &quot;text&quot;: &quot;API Requirements&quot;,
+            &quot;items&quot;: [
+              {
+                &quot;text&quot;: &quot;Students&quot;,
+                &quot;link&quot;: &quot;/integration/students/list&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Student&quot;,
+                &quot;link&quot;: &quot;/integration/students/item&quot;
+              }
+            ]
+          },
+          {
+            &quot;text&quot;: &quot;Webhooks&quot;,
+            &quot;link&quot;: &quot;/integration/students/webhooks&quot;,
+            &quot;items&quot;: [
+              {
+                &quot;text&quot;: &quot;Create a student&quot;,
+                &quot;link&quot;: &quot;/integration/students/create&quot;
+              },
+              {
+                &quot;text&quot;: &quot;Update a student&quot;,
+                &quot;link&quot;: &quot;/integration/students/update&quot;
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    &quot;/development/&quot;: [
+      {
+        &quot;text&quot;: &quot;Working with SkillUp&quot;,
+        &quot;collapsed&quot;: false,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;Course Model&quot;,
+            &quot;link&quot;: &quot;/development/core/course-model&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Enrollment Model&quot;,
+            &quot;link&quot;: &quot;/development/core/enrollment-model&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Events&quot;,
+            &quot;link&quot;: &quot;/development/core/events&quot;
+          },
+          {
+            &quot;text&quot;: &quot;PDF&quot;,
+            &quot;link&quot;: &quot;/development/core/pdf&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Integration&quot;,
+            &quot;link&quot;: &quot;/development/core/integration&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Artisan Console&quot;,
+            &quot;link&quot;: &quot;/development/core/console-commands&quot;
+          }
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;Extending SkillUp&quot;,
+        &quot;collapsed&quot;: false,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;Unit Testing&quot;,
+            &quot;link&quot;: &quot;/development/extend/unit-testing&quot;
+          }
+        ]
+      }
+    ]
+  },
+  &quot;footer&quot;: {
+    &quot;message&quot;: &quot;&quot;,
+    &quot;copyright&quot;: &quot;Copyright © 2025 &lt;a href=\&quot;https://skillhup.global\&quot;&gt;SkillUp Global&lt;/a&gt;&quot;
+  },
+  &quot;socialLinks&quot;: [
+    {
+      &quot;icon&quot;: {
+        &quot;svg&quot;: &quot;&lt;svg width=\&quot;100%\&quot; height=\&quot;100%\&quot; viewBox=\&quot;0 0 9 9\&quot; version=\&quot;1.1\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; xml:space=\&quot;preserve\&quot; xmlns:serif=\&quot;http://www.serif.com/\&quot; fill=\&quot;currentColor\&quot;&gt;&lt;path d=\&quot;M7.42,4.068c-0.13,-2.124 -2.444,-3.962 -3.397,-3.983c-0.953,-0.02 -2.735,2.23 -2.808,4.515c-0.067,2.144 1.762,3.614 2.549,3.8c0.022,-1.008 0.103,-4.721 0.117,-5.154c0.028,-0.885 0.072,-2.261 0.219,-2.307c0.085,-0.026 0.201,0.748 0.186,1.205c-0.003,0.087 -0.004,0.37 -0.004,0.771c0.16,-0.162 0.326,-0.331 0.428,-0.43c0.277,-0.273 0.4,-0.24 0.267,0.003c-0.082,0.149 -0.435,0.647 -0.694,1.008c0.002,0.727 0.005,1.642 0.008,2.495c0.366,-0.429 0.814,-0.942 1.05,-1.171c0.494,-0.478 0.546,-0.418 0.313,0.085c-0.143,0.307 -0.843,1.129 -1.36,1.776c0.003,0.757 0.006,1.393 0.006,1.697c1.386,-0.305 3.248,-2.224 3.12,-4.31\&quot; /&gt;&lt;/svg&gt;&quot;
+      },
+      &quot;link&quot;: &quot;https://octobercms.com/plugin/skillup&quot;
+    },
+    {
+      &quot;icon&quot;: &quot;github&quot;,
+      &quot;link&quot;: &quot;https://github.com/voilaah/skillup-docs&quot;
+    }
+  ]
+}</pre><h3 id="page-data" tabindex="-1">Page Data <a class="header-anchor" href="#page-data" aria-label="Permalink to &quot;Page Data&quot;">​</a></h3><pre>{
+  &quot;title&quot;: &quot;Runtime API Examples&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;frontmatter&quot;: {
+    &quot;outline&quot;: &quot;deep&quot;
+  },
+  &quot;headers&quot;: [],
+  &quot;relativePath&quot;: &quot;api-examples.md&quot;,
+  &quot;filePath&quot;: &quot;api-examples.md&quot;,
+  &quot;lastUpdated&quot;: 1747825509000
+}</pre><h3 id="page-frontmatter" tabindex="-1">Page Frontmatter <a class="header-anchor" href="#page-frontmatter" aria-label="Permalink to &quot;Page Frontmatter&quot;">​</a></h3><pre>{
+  &quot;outline&quot;: &quot;deep&quot;
+}</pre><h2 id="more" tabindex="-1">More <a class="header-anchor" href="#more" aria-label="Permalink to &quot;More&quot;">​</a></h2><p>Check out the documentation for the <a href="https://vitepress.dev/reference/runtime-api#usedata" target="_blank" rel="noreferrer">full list of runtime APIs</a>.</p></div></div></main><footer class="VPDocFooter" data-v-39a288b8 data-v-e257564d><!--[--><!--]--><div class="edit-info" data-v-e257564d><!----><div class="last-updated" data-v-e257564d><p class="VPLastUpdated" data-v-e257564d data-v-e98dd255>Last updated: <time datetime="2025-05-21T11:05:09.000Z" data-v-e98dd255></time></p></div></div><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter" data-v-5d98c3a5 data-v-e315a0ad><div class="container" data-v-e315a0ad><!----><p class="copyright" data-v-e315a0ad>Copyright © 2025 <a href="https://skillhup.global">SkillUp Global</a></p></div></footer><!--[--><!--]--></div></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"api-examples.md\":\"BuKtlJ-V\",\"development_core_events.md\":\"DCcCdebn\",\"development_core_pdf.md\":\"Bix4W4R8\",\"development_index.md\":\"BuSroh9Y\",\"guide_index.md\":\"DITXU4eD\",\"guide_usage_reviews.md\":\"BHC2Xjuh\",\"index.md\":\"CzCRXVqS\",\"integration_courses_create.md\":\"CnewvyzS\",\"integration_courses_delete.md\":\"DnyXw7MQ\",\"integration_courses_index.md\":\"q1faShpg\",\"integration_courses_item.md\":\"BvRuPvM6\",\"integration_courses_lesson_create.md\":\"D_F4ZcZA\",\"integration_courses_lesson_update.md\":\"C8lwd7Ng\",\"integration_courses_list.md\":\"CFxyuFKx\",\"integration_courses_models_assignment.md\":\"n2hsIoAJ\",\"integration_courses_models_course.md\":\"y6gzGF5t\",\"integration_courses_models_engagement.md\":\"CIuaFLmR\",\"integration_courses_models_index.md\":\"w6a79PKv\",\"integration_courses_models_lesson.md\":\"DcSen7t9\",\"integration_courses_models_module.md\":\"LUdCeES-\",\"integration_courses_models_summary.md\":\"CYjM-MVA\",\"integration_courses_module_create.md\":\"BHo7AmZt\",\"integration_courses_module_update.md\":\"UroGZ-Ks\",\"integration_courses_update.md\":\"Cvk1ThED\",\"integration_courses_webhooks.md\":\"D-uyYOlL\",\"integration_index.md\":\"ByCV0BFx\",\"integration_students_create.md\":\"CkbhhY0A\",\"integration_students_index.md\":\"DYU3lh4c\",\"integration_students_item.md\":\"8I-Y3y3f\",\"integration_students_list.md\":\"CutXBO2T\",\"integration_students_structure.md\":\"CruiO2zK\",\"integration_students_update.md\":\"D2bic2Dw\",\"integration_students_webhooks.md\":\"DU7rB13p\",\"markdown-examples.md\":\"8nZOFcpF\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\"SkillUp Documentation\",\"description\":\"Official SkillUp Global Documentation for features, backend users and API integration\",\"base\":\"/skillup-docs/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"logo\":{\"light\":\"/skillup-logo-dark.png\",\"dark\":\"/skillup-logo-light.png\"},\"siteTitle\":false,\"lastUpdated\":{\"text\":\"Last updated\"},\"externalLinkIcon\":true,\"search\":{\"provider\":\"local\"},\"nav\":[{\"text\":\"Home\",\"link\":\"/\"},{\"text\":\"Guide\",\"link\":\"/guide/\",\"activeMatch\":\"/guide/\"},{\"text\":\"Integration\",\"link\":\"/integration/\",\"activeMatch\":\"/integration/\"},{\"text\":\"Development\",\"link\":\"/development/\",\"activeMatch\":\"/development/\"}],\"sidebar\":{\"/guide/\":[{\"text\":\"Introduction\",\"collapsed\":false,\"items\":[{\"text\":\"Getting Started\",\"link\":\"/guide/\"},{\"text\":\"Installation\",\"link\":\"/guide/introduction/installation\"},{\"text\":\"Configuration\",\"link\":\"/guide/introduction/configuration\"}]},{\"text\":\"Usage\",\"collapsed\":false,\"items\":[{\"text\":\"Courses\",\"link\":\"/guide/usage/properties\"},{\"text\":\"Categories\",\"link\":\"/guide/usage/categories\"},{\"text\":\"Reviews\",\"link\":\"/guide/usage/reviews\"},{\"text\":\"Settings\",\"link\":\"/guide/usage/settings\"},{\"text\":\"Going Live\",\"link\":\"/guide/usage/going-live\"}]},{\"text\":\"Components\",\"collapsed\":true,\"items\":[{\"text\":\"Course\",\"link\":\"/guide/components/product\"},{\"text\":\"Courses\",\"link\":\"/guide/components/products\"},{\"text\":\"CoursesFilter\",\"link\":\"/guide/components/courses-filter\"},{\"text\":\"CourseReview\",\"link\":\"/guide/components/course-reviews\"},{\"text\":\"MyAccount\",\"link\":\"/guide/components/my-account\"}]}],\"/integration/\":[{\"text\":\"Courses Integration\",\"collapsed\":false,\"items\":[{\"text\":\"Getting Started\",\"link\":\"/integration/courses/\"},{\"text\":\"Data Model\",\"link\":\"/integration/courses/models/\",\"items\":[{\"text\":\"Course\",\"link\":\"/integration/courses/models/course\"},{\"text\":\"Module\",\"link\":\"/integration/courses/models/module\"},{\"text\":\"Lesson\",\"link\":\"/integration/courses/models/lesson\"},{\"text\":\"Engagement\",\"link\":\"/integration/courses/models/engagement\"},{\"text\":\"Assignment\",\"link\":\"/integration/courses/models/assignment\"},{\"text\":\"Summary\",\"link\":\"/integration/courses/models/summary\"}]},{\"text\":\"API Requirements\",\"items\":[{\"text\":\"Courses \",\"link\":\"/integration/courses/list\"},{\"text\":\"Course\",\"link\":\"/integration/courses/item\"}]},{\"text\":\"Webhooks\",\"link\":\"/integration/courses/webhooks\",\"items\":[{\"text\":\"Create a course\",\"link\":\"/integration/courses/create\"},{\"text\":\"Update a course\",\"link\":\"/integration/courses/update\"},{\"text\":\"Delete a course\",\"link\":\"/integration/courses/delete\"},{\"text\":\"Create a module\",\"link\":\"/integration/courses/module_create\"},{\"text\":\"Update a module\",\"link\":\"/integration/courses/module_update\"},{\"text\":\"Create a lesson\",\"link\":\"/integration/courses/lesson_create\"},{\"text\":\"Update a lesson\",\"link\":\"/integration/courses/lesson_update\"}]}]},{\"text\":\"Students Integration\",\"collapsed\":true,\"items\":[{\"text\":\"Getting Started\",\"link\":\"/integration/students/index\"},{\"text\":\"API Requirements\",\"items\":[{\"text\":\"Students\",\"link\":\"/integration/students/list\"},{\"text\":\"Student\",\"link\":\"/integration/students/item\"}]},{\"text\":\"Webhooks\",\"link\":\"/integration/students/webhooks\",\"items\":[{\"text\":\"Create a student\",\"link\":\"/integration/students/create\"},{\"text\":\"Update a student\",\"link\":\"/integration/students/update\"}]}]}],\"/development/\":[{\"text\":\"Working with SkillUp\",\"collapsed\":false,\"items\":[{\"text\":\"Course Model\",\"link\":\"/development/core/course-model\"},{\"text\":\"Enrollment Model\",\"link\":\"/development/core/enrollment-model\"},{\"text\":\"Events\",\"link\":\"/development/core/events\"},{\"text\":\"PDF\",\"link\":\"/development/core/pdf\"},{\"text\":\"Integration\",\"link\":\"/development/core/integration\"},{\"text\":\"Artisan Console\",\"link\":\"/development/core/console-commands\"}]},{\"text\":\"Extending SkillUp\",\"collapsed\":false,\"items\":[{\"text\":\"Unit Testing\",\"link\":\"/development/extend/unit-testing\"}]}]},\"footer\":{\"message\":\"\",\"copyright\":\"Copyright © 2025 <a href=\\\"https://skillhup.global\\\">SkillUp Global</a>\"},\"socialLinks\":[{\"icon\":{\"svg\":\"<svg width=\\\"100%\\\" height=\\\"100%\\\" viewBox=\\\"0 0 9 9\\\" version=\\\"1.1\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" xmlns:xlink=\\\"http://www.w3.org/1999/xlink\\\" xml:space=\\\"preserve\\\" xmlns:serif=\\\"http://www.serif.com/\\\" fill=\\\"currentColor\\\"><path d=\\\"M7.42,4.068c-0.13,-2.124 -2.444,-3.962 -3.397,-3.983c-0.953,-0.02 -2.735,2.23 -2.808,4.515c-0.067,2.144 1.762,3.614 2.549,3.8c0.022,-1.008 0.103,-4.721 0.117,-5.154c0.028,-0.885 0.072,-2.261 0.219,-2.307c0.085,-0.026 0.201,0.748 0.186,1.205c-0.003,0.087 -0.004,0.37 -0.004,0.771c0.16,-0.162 0.326,-0.331 0.428,-0.43c0.277,-0.273 0.4,-0.24 0.267,0.003c-0.082,0.149 -0.435,0.647 -0.694,1.008c0.002,0.727 0.005,1.642 0.008,2.495c0.366,-0.429 0.814,-0.942 1.05,-1.171c0.494,-0.478 0.546,-0.418 0.313,0.085c-0.143,0.307 -0.843,1.129 -1.36,1.776c0.003,0.757 0.006,1.393 0.006,1.697c1.386,-0.305 3.248,-2.224 3.12,-4.31\\\" /></svg>\"},\"link\":\"https://octobercms.com/plugin/skillup\"},{\"icon\":\"github\",\"link\":\"https://github.com/voilaah/skillup-docs\"}]},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":false}");</script>
+    
+  </body>
+</html>

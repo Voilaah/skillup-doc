@@ -1,4 +1,6 @@
 import { defineConfig } from "vitepress";
+import { writeFileSync } from 'fs'
+import { resolve } from 'path'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -7,6 +9,9 @@ export default defineConfig({
     "Official SkillUp Global Documentation for features, backend users and API integration",
   lang: "en-US",
   base: "/skillup-docs/",
+  buildEnd() {
+    writeFileSync(resolve(__dirname, 'dist/CNAME'), 'docs.skillup.global')
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
@@ -78,7 +83,9 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: "Getting Started", link: "/integration/courses/" },
-            { text: "Data Model", link: "/integration/courses/models/",
+            { text: "Data Model",
+              link: "/integration/courses/models/",
+              collapsed: true,
               items: [
                 { text: "Course", link: "/integration/courses/models/course" },
                 { text: "Module", link: "/integration/courses/models/module" },
@@ -90,12 +97,15 @@ export default defineConfig({
              },
             {
               text: "API Requirements",
+              collapsed: true,
               items: [
                 { text: "Courses ", link: "/integration/courses/list" },
                 { text: "Course", link: "/integration/courses/item" }
               ]
             },
-            { text: "Webhooks", link: "/integration/courses/webhooks",
+            { text: "Webhooks",
+              link: "/integration/courses/webhooks",
+              collapsed: true,
               items: [
                 { text: "Create a course", link: "/integration/courses/create" },
                 { text: "Update a course", link: "/integration/courses/update" },
