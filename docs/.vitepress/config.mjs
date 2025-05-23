@@ -245,8 +245,18 @@ export default defineConfig({
             dark: "/skillup-logo-light.png",
           },
           siteTitle: false,
-          lastUpdated: {
-            text: "อัปเดตล่าสุด",
+          outlineTitle: 'ในหน้านี้', // "On this page"
+          docFooter: {
+            prev: 'หน้าก่อนหน้า', // "Previous page"
+            next: 'หน้าถัดไป',    // "Next page"
+          },
+          lastUpdatedText: 'อัปเดตล่าสุดเมื่อ', // "Last updated"
+          darkModeSwitchLabel: 'โหมดกลางคืน',
+          sidebarMenuLabel: 'เมนู',
+          returnToTopLabel: 'กลับไปด้านบน',
+          langMenuLabel: 'เปลี่ยนภาษา',
+          search: {
+            placeholder: 'ค้นหาเอกสาร...',
           },
           externalLinkIcon: true,
           search: {
