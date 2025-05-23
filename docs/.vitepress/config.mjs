@@ -39,11 +39,11 @@ export default defineConfig({
             link: "/integration/",
             activeMatch: "/integration/",
           },
-          {
+          /* {
             text: "Development",
             link: "/development/",
             activeMatch: "/development/",
-          },
+          }, */
         ],
         sidebar: {
           "/guide/": [
@@ -59,7 +59,7 @@ export default defineConfig({
                 },
               ],
             },
-            {
+            /* {
               text: "Usage",
               collapsed: false,
               items: [
@@ -80,7 +80,7 @@ export default defineConfig({
                 { text: "CourseReview", link: "/guide/components/course-reviews" },
                 { text: "MyAccount", link: "/guide/components/my-account" },
               ],
-            },
+            }, */
           ],
           "/integration/": [
             {
